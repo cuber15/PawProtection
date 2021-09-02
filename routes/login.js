@@ -9,7 +9,7 @@ indexRouter.route('/')
 .all((req, res) => {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/html');
-    res.render('frontPage');
+    res.render('login');
 })
 
 module.exports = indexRouter;

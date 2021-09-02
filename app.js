@@ -18,10 +18,7 @@ const indexRouter = require('./routes/index');
 const loginRouter = require('./routes/login');
 
 
-app.all('/', (req, res, next) => {
-    res.statusCode = 200;
-    res.send("hello");
-})
+
 
 app.use('/', indexRouter);
 app.use('/login', loginRouter);

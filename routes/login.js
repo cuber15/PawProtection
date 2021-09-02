@@ -1,15 +1,15 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
-const indexRouter = express.Router();
+const loginRouter = express.Router();
 
-indexRouter.use(bodyParser.json());
+loginRouter.use(bodyParser.json());
 
-indexRouter.route('/')
+loginRouter.route('/')
 .all((req, res) => {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/html');
     res.render('login');
 })
 
-module.exports = indexRouter;
+module.exports = loginRouter;

@@ -16,12 +16,14 @@ app.set('views', path.join(__dirname, 'views'));
 
 const indexRouter = require('./routes/index');
 const loginRouter = require('./routes/login');
+const SignupRouter = require('./routes/signup');
 
 
 
 
 app.use('/', indexRouter);
 app.use('/login', loginRouter);
+app.use('/signup', SignupRouter);
 
 
 app.listen(port, hostname, () => {

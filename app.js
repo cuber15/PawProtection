@@ -3,9 +3,17 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const bodyParser = require('body-parser');
-
+const mongoose =require('mongoose');
 const port = 8080;
 const hostname = '127.0.0.1';
+
+const url='mongodb://localhost:27017/Data';
+
+const connect = mongoose.connect(url);
+
+connect.then((db) => {
+    console.log("Connected to database");
+});
 
 app.use(bodyParser.json());
 

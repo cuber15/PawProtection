@@ -9,7 +9,7 @@ SignupRouter.route('/')
 .all((req, res) => {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/html');
-    res.render('signup');
+    res.render('register');
 })
 
 module.exports = SignupRouter;
